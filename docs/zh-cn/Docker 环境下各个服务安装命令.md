@@ -1,0 +1,64 @@
+# Docker 环境下各个服务安装命令
+
+1. 可视化管理工具**Portainer**
+
+```bash
+# 查询当前有哪些Portainer镜像
+docker search portainer
+# 下载镜像
+docker pull portainer/portainer
+# 单机版运行
+docker run -d -p 9000:9000 --restart=always -v /var/run/docker.sock:/var/run/docker.sock --name service-portainer portainer/portainer
+# https://blog.csdn.net/u011781521/article/details/80469804
+```
+
+2. 关系型数据库**MySQL**
+
+```bash
+# 查找MySQL镜像
+docker search mysql
+# 拉取MySQL镜像
+docker pull mysql
+# Windows环境数据持久化运行
+docker run -d -p 3306:3306 --restart=always --privileged=true -v D:/Java/MySQL/config/my.conf:/etc/my.cof -v=D:/Java/MySQL/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 --name service-mysql mysql
+# Linux环境数据持久化运行
+docker run -d -p 3306:3306 --restart=always --privileged=true -v /mysql/config/my.conf:/etc/my.cof -v=/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 --name service-mysql mysql
+```
+
+3. 缓存型数据库**Redis**
+
+```bash
+# 查找Redis镜像
+docker search redis
+# 拉取Redis镜像
+docker pull redis
+# 启动redis实例，指定端口和密码
+docker run -d -p 6379:6379 --restart=always --name service-redis redis --requirepass "mylove66588"
+```
+
+4. 消息代理**RabbitMQ**
+
+```bash
+# 查找RabbitMQ镜像
+docker search rabbitmq
+# 拉取RabbitMQ镜像 (未配有控制台)
+docker pull rabbitmq
+# 拉取RabbitMQ镜像 (配有控制台) tag标签查询https://hub.docker.com/_/rabbitmq?tab=tags
+docker pull rabbitmq:management
+# 安装运行
+docker run -d -p 15672:15672 -p 5672:5672 --restart=always --name service-rabbitmq rabbitmq:management
+```
+
+5. 后端JavaScript运行环境**Node.js**
+
+```bash
+# 查找Node.js镜像
+docker search node
+# 拉取Node.js镜像
+docker pull node
+# 安装运行
+docker run -d --restart=always --name service-node node
+# 进入bash环境
+docker exec -it service-node /bin/bash
+```
+
