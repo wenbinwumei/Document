@@ -19,7 +19,7 @@
         loadNavbar: true,
         loadSidebar: true,
         //hideSidebar: true,
-        subMaxLevel: 2,
+        subMaxLevel: 3,
         auto2top: false,
         coverpage: true,
         //logo: '/_media/icon.svg'
@@ -28,15 +28,8 @@
         search: {
             maxAge: 86400000, // 过期时间，单位毫秒，默认一天
             placeholder: '搜索 ...',
-            noData: '找不到结果！',
-            // 搜索标题的最大层级, 1 - 6
-            depth: 2
-        },
-        pagination: {
-            previousText: '上一章节',
-            nextText: '下一章节',
-            crossChapter: true,
-            crossChapterText: true,
+            noData: '未找到结果，换个搜索词试试？',
+            depth: 2 // 搜索标题的最大层级, 1 - 6
         },
         count: {
             countable: true,
@@ -64,7 +57,8 @@
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
 <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
 </body>
 </html>
