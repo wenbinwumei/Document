@@ -1,4 +1,5 @@
 * [Home](devops/)
 * [Docker](devops/docker/)
 * [Git](devops/git/)
+* [IDEA](devops/idea/)
 * [Other](devops/other/)
