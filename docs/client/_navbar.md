@@ -8,6 +8,7 @@
   * [JQuery](client/jquery/)
   * [Angular](client/angular/)
   * [React](client/react/)
-  * [Vue](client/vue/)
+  * [Vue 2](client/vue2/)
+  * [Vue 3](client/vue3/)
   * [TypeScript](client/ts/)
   * [Node](client/node/)
