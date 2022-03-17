@@ -2,4 +2,5 @@
 * [Docker](devops/docker/)
 * [Git](devops/git/)
 * [IDEA](devops/idea/)
+* [VS Code](devops/vscode/)
 * [Other](devops/other/)
